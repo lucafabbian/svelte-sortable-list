@@ -92,9 +92,9 @@
         on:dragover={over}
         on:dragleave={leave}
         on:drop={drop}
-        in:receive={{ key: getKey(item) }}
-        out:send={{ key: getKey(item) }}
-        animate:flip={{ duration: 300 }}
+        in:receive|local={{ key: getKey(item) }}
+        out:send|local={{ key: getKey(item) }}
+        animate:flip|local={{ duration: 300 }}
         class:over={getKey(item) === isOver}>
         <slot {item} {index}>
           <p>{getKey(item)}</p>
